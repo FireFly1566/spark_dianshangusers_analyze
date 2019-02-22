@@ -1,5 +1,7 @@
 package conf;
 
+import org.apache.spark.sql.sources.In;
+
 import java.io.InputStream;
 import java.util.Properties;
 
@@ -54,6 +56,18 @@ public class ConfigurationManager {
      */
     public static String getProperty(String key) {
         return prop.getProperty(key);
+    }
+
+    public static Integer getInteger(String key){
+        String value = getProperty(key);
+
+        try{
+            return Integer.valueOf(value);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return 0;
     }
 
 }
