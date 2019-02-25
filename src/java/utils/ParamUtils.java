@@ -2,8 +2,9 @@ package utils;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.ibeifeng.sparkproject.conf.ConfigurationManager;
-import com.ibeifeng.sparkproject.constant.Constants;
+import conf.ConfigurationManager;
+import constant.Constants;
+
 
 /**
  * 参数工具类
