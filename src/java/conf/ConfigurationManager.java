@@ -58,16 +58,47 @@ public class ConfigurationManager {
         return prop.getProperty(key);
     }
 
-    public static Integer getInteger(String key){
+    public static Integer getInteger(String key) {
         String value = getProperty(key);
 
-        try{
+        try {
             return Integer.valueOf(value);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         return 0;
+    }
+
+    /**
+     * @Description:  获取布尔类型配置项
+     * @param key
+     * @return java.lang.Boolean
+     */
+    public static Boolean getBoolean(String key) {
+        String value = getProperty(key);
+        try {
+            return Boolean.valueOf(value);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    /**
+     * 获取Long类型的配置项
+     * @param key
+     * @return
+     */
+    public static Long getLong(String key) {
+        String value = getProperty(key);
+        try {
+            return Long.valueOf(value);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0L;
     }
 
 }
